@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+*{
+  margin: 0px;
+  padding:0px;
+  
+}
+body{
+  font-family: "Mukta", sans-serif;
+  background-color: #EEEDEB !important;
+}
+header{
+  width:100%;
+  background: #fff;
+  height:80px;
+}
+header .logo{
+  text-decoration: none;
+}
+header .logo img{
+  width:45px;
+
+}
+header .logo span{
+  color:#292929;
+  font-weight:800;
+  font-size:24px;
+}
+
+header button.rounded-circle{
+  min-width:40px !important;
+  width:40px !important;
+  height:40px!important;
+  background:#f0f5ff !important;
+  color:#292929;
+}
+header button.rounded-circle svg{
+  color:#292929;
+  font-size:18px !important;
+  border-style: none;
+}
+.search{
+  width:400px;
+  height:30px;
+  background:#f0f5ff;
+  border-radius:6px;
+  padding:3px 15px;
+}
+.search{
+  background:transparent;
+  border:0px;
+  outline:none;
+  padding-left:0px;
+  font-size:15px;
+  color:#292929;
+}
+.search input::-webkit-input-placeholder{
+  color:rgba(0,0,0,0.6);
+}
+.search svg{
+  font-size:20px;
+  color:#292929;
+}
+
+.myAcc .userImg{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  width:40px;
+  height:40px;
+}
+.myAcc .userImg .rounded-circle{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  width:40px;
+  height:40px;
+ cursor:pointer;
+ position:relative;
+}
+
+.myAcc .userImg .rounded-circle img{
+  object-fit:cover;
+  width:100%;
+}
