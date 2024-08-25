@@ -2,9 +2,9 @@ import { IoSearch } from "react-icons/io5";
 
 const Search = () => {
     return(
-        <div classname="search position-relative d-flex align-items-center">
+        <div className="search position-relative d-flex align-items-center">
             <IoSearch className="mr-2" />
-            <input type="text" placeholder ="Search here"/>
+            <input type="text" placeholder ="Search here..."/>
 
         </div>
     )
