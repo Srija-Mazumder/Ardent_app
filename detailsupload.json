@@ -1,0 +1,143 @@
+[
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "janesmith@example.com",
+      "password": "password456",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "Bob",
+      "lastName": "Johnson",
+      "email": "bobjohnson@example.com",
+      "password": "password789",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "Alice",
+      "lastName": "Williams",
+      "email": "alicewilliams@example.com",
+      "password": "password012",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "Mike",
+      "lastName": "Davis",
+      "email": "mikedavis@example.com",
+      "password": "password345",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "Emma",
+      "lastName": "Taylor",
+      "email": "emmataylor@example.com",
+      "password": "password678",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "David",
+      "lastName": "Brown",
+      "email": "davidbrown@example.com",
+      "password": "password901",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "Sophia",
+      "lastName": "Miller",
+      "email": "sophiamiller@example.com",
+      "password": "password234",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "Oliver",
+      "lastName": "Wilson",
+      "email": "oliverwilson@example.com",
+      "password": "password567",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "Mia",
+      "lastName": "Anderson",
+      "email": "miaanderson@example.com",
+      "password": "password890",
+      "accountType": "Student"
+    },
+    {
+      "firstName": "Dr. John",
+      "lastName": "Doe",
+      "email": "drjohndoe@example.com",
+      "password": "password123",
+      "accountType": "Teacher"
+    },
+    {
+      "firstName": "Prof. Jane",
+      "lastName": "Smith",
+      "email": "profjanesmith@example.com",
+      "password": "password456",
+      "accountType": "Teacher"
+    },
+    {
+      "firstName": "Mr. Bob",
+      "lastName": "Johnson",
+      "email": "mrbobjohnson@example.com",
+      "password": "password789",
+      "accountType": "Teacher"
+    },
+    {
+      "firstName": "Ms. Alice",
+      "lastName": "Williams",
+      "email": "msalicewilliams@example.com",
+      "password": "password012",
+      "accountType": "Teacher"
+    },
+    {
+      "firstName": "Dr. Mike",
+      "lastName": "Davis",
+      "email": "drmikedavis@example.com",
+      "password": "password345",
+      "accountType": "Teacher"
+    },
+    {
+      "firstName": "Prof. Emma",
+      "lastName": "Taylor",
+      "email": "profemmataylor@example.com",
+      "password": "password678",
+      "accountType": "Teacher"
+    },
+    {
+      "firstName": "Dr. David",
+      "lastName": "Brown",
+      "email": "drdavidbrown@example.com",
+      "password": "password901",
+      "accountType": "Teacher"
+    },
+    {
+      "firstName": "Prof. Sophia",
+      "lastName": "Miller",
+      "email": "profsophiamiller@example.com",
+      "password": "password234",
+      "accountType": "Teacher"
+    },
+    {
+      "firstName": "Dr. Oliver",
+      "lastName": "Wilson",
+      "email": "droliverwilson@example.com",
+      "password": "password567",
+      "accountType": "Teacher"
+    },
+    {
+      "firstName": "Ms. Mia",
+      "lastName": "Anderson",
+      "email": "msmiaanderson@example.com",
+      "password": "password890",
+      "accountType": "Teacher"
+    }
+  ]
+  

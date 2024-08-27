@@ -1,11 +1,10 @@
+// src/pages/Theme/ThemeContext.js
 import React, { createContext, useState, useContext } from 'react';
 
-// Create a Context for the theme
 const ThemeContext = createContext();
 
-// Create a Provider component
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light'); // Default theme
+  const [theme, setTheme] = useState('light');
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
@@ -18,5 +17,10 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// Custom hook for using the theme context
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
+};

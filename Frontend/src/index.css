@@ -186,3 +186,219 @@ transition:all 0.3s ease-in-out;
     height: 250px;
   }
 
+  .homecard {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 9px;
+    height: 20rem;
+  }
+  
+  .homecard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+ 
+  
+  .homecard-img-top {
+    width: 100%;
+    height: 70%;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .homecard-body {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .homecard-title {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  /* External CSS */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+
+.specific-section {
+    font-family: 'Oswald', sans-serif;
+    color: #333; /* Professional dark color */
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.specific-section h1, .specific-section h2 {
+    font-weight: 700; /* Bold for headings */
+    color: #2c3e50; /* A darker shade for headings */
+    margin-bottom: 20px;
+}
+
+.specific-section p {
+    font-weight: 300; /* Lighter for body text */
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.specific-section h1 {
+    font-size: 2.5rem; /* Large font size for main title */
+}
+
+.specific-section h2 {
+    font-size: 2rem; /* Slightly smaller for subtitles */
+}
+.homepage{
+  margin: 33px;
+}
+
+/* Footer.css */
+footer {
+  background-color: #f9f9f9; /* Light background color */
+  color: #333; /* Dark text color for contrast */
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  border-top: 1px solid #e1e1e1; /* Border to differentiate */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.descrip, .social-links, .contact-info {
+  padding: 10px;
+}
+
+.descrip h5 {
+  font-size: 1rem; /* Adjust to professional standards */
+  margin-bottom: 10px;
+}
+
+.descrip h6 {
+  font-size: .9rem; /* Adjust to professional standards */
+  margin-bottom: 15px;
+}
+
+.descrip p {
+  font-size: .7rem; /* Adjust to professional standards */
+}
+
+
+/* Footer container styling */
+.footer {
+  padding: 2rem 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa; /* Light theme */
+}
+
+.footer-container {
+  max-width: 1200px; /* Center align content */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.descrip, .social-links, .contact-info {
+  padding: 1rem; /* Add some padding for spacing */
+}
+
+.descrip {
+  flex: 1 1 50%; /* Responsive: Take up 50% width on larger screens */
+}
+
+.social-links {
+  flex: 1 1 25%; /* Responsive: Take up 25% width on larger screens */
+}
+
+.contact-info {
+  flex: 1 1 25%; /* Responsive: Take up 25% width on larger screens */
+}
+
+/* Social Links */
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start; /* Align icons on the left */
+}
+
+.social-links li {
+  margin-right: 1rem; /* Space between icons */
+}
+
+.social-links a {
+  color: #333;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+/* Contact Info */
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .social-links, .contact-info {
+    flex: 1 1 100%; /* Take up full width on small screens */
+    text-align: center; /* Center align text */
+    margin-top: 1rem; /* Add space between sections */
+  }
+
+  .social-links ul {
+    justify-content: center; 
+    text-align: center;
+  }
+
+  .descrip {
+    text-align: center; /* Center align text for description */
+  }
+}
+
+
+
+
+
+
+/* FirstHeader.css */
+/* Ensure navbar-collapse behaves correctly on small viewports */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: none; /* Hide collapse content by default */
+  }
+
+  .navbar-collapse.show {
+    display: block !important; /* Show collapse content when toggled */
+  }
+}
+
+/* Ensure navbar links are aligned correctly on larger viewports */
+@media (min-width: 769px) {
+  .navbar-nav {
+    flex-direction: row; /* Ensure items are in a row */
+  }
+  
+  .navbar-nav .nav-link {
+    margin-left: 20px; /* Space between nav items */
+  }
+  
+  .ml-auto {
+    margin-left: auto; /* Push items to the right */
+  }
+}
