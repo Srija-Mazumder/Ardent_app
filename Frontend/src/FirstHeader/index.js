@@ -1,21 +1,21 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // Use Link for routing
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from "../assets/images/logo.jpg";
+import logo from '../assets/images/logo.jpg';
 
 const FirstHeader = () => {
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand as={Link} to="/"> {/* Use Link for the brand as well */}
+    <Navbar bg="light" expand="lg" className="px-3">
+      <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
         <img src={logo} alt="Logo" width="30" height="30" className="d-inline-block align-top m-1" />
-        Edusparks
+        <span className="ml-2">Edusparks</span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/">Home</Nav.Link> {/* Link to Home */}
-          <Nav.Link as={Link} to="/login">Login</Nav.Link> {/* Link to Login */}
+      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+        <Nav className="text-center">
+          <Nav.Link as={Link} to="/" className="mx-2">Home</Nav.Link>
+          <Nav.Link as={Link} to="/login" className="mx-2">Login</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

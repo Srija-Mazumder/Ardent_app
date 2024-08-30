@@ -16,7 +16,7 @@ import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { FaPlay } from 'react-icons/fa';
 
-const drawerWidth = 159;
+const drawerWidth = 180; // Adjusted width to match your layout
 
 const icons = [
   <FaPlay />,
@@ -29,28 +29,27 @@ const icons = [
 
 const Sidebar = ({ window, open, handleDrawerToggle }) => {
   const container = window !== undefined ? () => window().document.body : undefined;
-  
-  const navigate = useNavigate(); // Hook to handle navigation
+  const navigate = useNavigate();
 
   const menuItems = [
-    { text: 'Courses', path: '/courses' },
-    { text: 'Dashboard', path: '/dashboard' },
-    { text: 'Test & Quiz', path: '/test-and-quiz' },
-    { text: 'Subscribed', path: '/subscribed' }, // Adjusted menu items
-    { text: 'Library', path: '/library' }
+    { text: 'Courses', path: 'courses' },
+    { text: 'Dashboard', path: 'dashboard' },
+    { text: 'Test & Quiz', path: 'test-and-quiz' },
+    { text: 'Subscribed', path: 'subscribed' },
+    { text: 'Library', path: 'library' }
   ];
 
   const handleMenuItemClick = (path) => {
-    navigate(path); // Navigate to the selected route
+    navigate(path);
   };
 
-  const drawer = (
+  const drawerContent = (
     <div>
       <Toolbar />
       <List>
         {menuItems.map((item, index) => (
           <ListItem button key={item.text} onClick={() => handleMenuItemClick(item.path)}>
-            <ListItemIcon sx={{ minWidth: 30, marginRight: 1 }}>
+            <ListItemIcon sx={{ minWidth: 35, marginRight: 2 }}>
               {icons[index]}
             </ListItemIcon>
             <ListItemText primary={item.text} />
@@ -70,25 +69,25 @@ const Sidebar = ({ window, open, handleDrawerToggle }) => {
         open={open}
         onClose={handleDrawerToggle}
         ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
+          keepMounted: true, // Better open performance on mobile
         }}
         sx={{
-          display: { xs: 'block', sm: 'none' },
+          display: { xs: 'block', sm: 'none' }, // Show on extra small screens
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
       >
-        {drawer}
+        {drawerContent}
       </Drawer>
       {/* Permanent Drawer */}
       <Drawer
         variant="permanent"
         sx={{
-          display: { xs: 'none', sm: 'block' },
+          display: { xs: 'none', sm: 'block' }, // Hide on extra small screens
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
         open
       >
-        {drawer}
+        {drawerContent}
       </Drawer>
     </Box>
   );

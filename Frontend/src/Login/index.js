@@ -11,17 +11,26 @@ import axios from 'axios';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState(''); // Added role state
+  const [accountType, setAccountType] = useState(''); // Changed from role to accountType
   const [loggedInUser, setLoggedInUser] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
+    if (!accountType) {
+      alert("Please select an account type.");
+      return;
+    }
+
     try {
+      // Normalize the accountType to lowercase before sending to the backend
+      const normalizedAccountType = accountType.toLowerCase();
+
       const response = await axios.post('http://localhost:8000/auth/login', {
         email,
         password,
-        role
+        accountType: normalizedAccountType // Send accountType instead of role
       }, {
         headers: {
           'Content-Type': 'application/json',
@@ -34,17 +43,17 @@ const Login = () => {
 
         // Store JWT token
         localStorage.setItem('token', data.token);
-        console.log('User Role:', data.role);
+        console.log('User Account Type:', data.accountType);
 
-        // Redirect based on user role
-        if (data.role === 'Student') {
+        // Redirect based on user account type
+        if (data.accountType === 'student') {
           navigate("/student");
-        } else if (data.role === 'Instructor') {
-          navigate("/instructors");
-        } else if (data.role === 'Admin') {
+        } else if (data.accountType === 'instructor') {
+          navigate("/instructor");
+        } else if (data.accountType === 'admin') {
           navigate("/admin");
         } else {
-          alert("Unknown role. Please contact support.");
+          alert("Unknown account type. Please contact support.");
         }
       } else {
         alert("Invalid credentials. Please try again.");
@@ -117,17 +126,17 @@ const Login = () => {
                   {!loggedInUser && (
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="#" onClick={() => setRole('Student')}>
+                        <a className="dropdown-item" href="#" onClick={() => setAccountType('student')}>
                           <SchoolIcon fontSize="small" /> Student
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#" onClick={() => setRole('Instructor')}>
+                        <a className="dropdown-item" href="#" onClick={() => setAccountType('instructor')}>
                           <GiTeacher size="1.2em" /> Instructor
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#" onClick={() => setRole('Admin')}>
+                        <a className="dropdown-item" href="#" onClick={() => setAccountType('admin')}>
                           <AdminPanelSettingsIcon fontSize="small" /> Admin
                         </a>
                       </li>

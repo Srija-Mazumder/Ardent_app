@@ -53,6 +53,9 @@ const SignUp = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    // Convert accountType to lowercase before sending to backend
+    const accountType = buttonText.toLowerCase();
+
     // Send signup request to backend
     const response = await fetch(`http://localhost:8000/auth/signup`, {
       method: 'POST',
@@ -61,7 +64,7 @@ const SignUp = () => {
       },
       body: JSON.stringify({
         ...formData,
-        accountType: buttonText,
+        accountType: accountType, // Account type in lowercase
       }),
     });
 

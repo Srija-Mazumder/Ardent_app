@@ -21,7 +21,7 @@ const TestandQuizzes = () => {
                   <p className="card-text">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
                   </p>
-                  <Link to="/test" className="btn btn-primary">Give a Test</Link> {/* Correct Link */}
+                  <Link to="/student/test" className="btn btn-primary">Give a Test</Link> {/* Correct Link */}
                 </div>
               </div>
             </div>
@@ -34,7 +34,7 @@ const TestandQuizzes = () => {
                   <p className="card-text">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
                   </p>
-                  <Link to="/quiz" className="btn btn-primary">Take a Quiz</Link> {/* Correct Link */}
+                  <Link to="/student/quiz" className="btn btn-primary">Take a Quiz</Link> {/* Correct Link */}
                 </div>
               </div>
             </div>

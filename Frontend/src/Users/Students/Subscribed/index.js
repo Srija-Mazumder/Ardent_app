@@ -1,5 +1,9 @@
 import React from 'react';
-import { FaVolumeUp } from 'react-icons/fa'; // Import loudspeaker icon
+import { FaVolumeUp } from 'react-icons/fa'; 
+import im1 from "../../../assets/images/gold batch.webp";
+import im2 from "../../../assets/images/silver.jpeg"
+import im3 from "../../../assets/images/Frontendd.jpeg"
+import im4 from "../../../assets/images/backend.jpeg"
 
 const Subscribed = () => {
   return (
@@ -30,62 +34,56 @@ const Subscribed = () => {
               </div>
             </div>
           </div>
-          <h2>Tests</h2>
-          <h5>Time to Level Up: Turn Learning into Victory!</h5>
 
-          {/* Tests */}
-          <div className="row">
+        
+
+        <div className='mt-5'>
+          <h2>Subscription batches available</h2>
+            <div className="row">
             <div className="col-md-6 mb-4">
               <div className="card" style={{ height: '400px' }}>
-                <img className="card-img-top" src="..." alt="Test Image" />
+                <img className="card-img-top" src={im1} alt="Test Image" />
                 <div className="card-body">
-                  <h5 className="card-title">Test Title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                  </p>
-                  <a href="#" className="btn btn-primary">Go somewhere</a>
+                  <h5 className="card-title">Batch 1 </h5>
+                  
+                  <a href="#" className="btn btn-primary mt-3">Subscribe</a>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 mb-4">
               <div className="card" style={{ height: '400px' }}>
-                <img className="card-img-top" src="..." alt="Test Image" />
+                <img className="card-img-top" src={im2} alt="Test Image" />
                 <div className="card-body">
-                  <h5 className="card-title">Another Test Title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                  </p>
-                  <a href="#" className="btn btn-primary">Go somewhere</a>
+                  <h5 className="card-title">Batch 2</h5>
+                  
+                  <a href="#" className="btn btn-primary mt-3">Subscribe</a>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
           {/* Quizzes */}
           <div className="row mt-4">
             <div className="col-md-6 mb-4">
               <div className="card" style={{ height: '400px' }}>
-                <img className="card-img-top" src="..." alt="Quiz Image" />
+                <img className="card-img-top" src={im3} alt="Quiz Image" />
                 <div className="card-body">
-                  <h5 className="card-title">Quiz Title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                  </p>
-                  <a href="#" className="btn btn-primary">Go somewhere</a>
+                  <h5 className="card-title">Batch 3</h5>
+                  
+                  <a href="#" className="btn btn-primary mt-3">Subscribe</a>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 mb-4">
               <div className="card" style={{ height: '400px' }}>
-                <img className="card-img-top" src="..." alt="Quiz Image" />
+                <img className="card-img-top" src={im4} alt="Quiz Image" />
                 <div className="card-body">
-                  <h5 className="card-title">Another Quiz Title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                  </p>
-                  <a href="#" className="btn btn-primary">Go somewhere</a>
+                  <h5 className="card-title">Batch 4</h5>
+                 
+                  <a href="#" className="btn btn-primary mt-3">Subscribe</a>
                 </div>
               </div>
             </div>

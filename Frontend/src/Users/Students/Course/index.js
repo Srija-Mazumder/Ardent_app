@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // for navigation
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid'; // Using Grid for responsive layout
 import Box from '@mui/material/Box';
 import expr from "../../../assets/images/02.webp"; 
 import mongo from "../../../assets/images/03.jpg";
@@ -16,11 +17,12 @@ import javs from "../../../assets/images/07.png";
 import htm from "../../../assets/images/08.jpg";
 import css from "../../../assets/images/00.webp";
 import dsa from "../../../assets/images/01.jpg";
+import Footer from '../../../Footer';
 
 // Course Component
 const Course = ({ course, handleBuy }) => {
   return (
-    <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 350 }}>
+    <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       <CardMedia
         component="img"
         alt={course.title}
@@ -35,7 +37,7 @@ const Course = ({ course, handleBuy }) => {
           {course.description}
         </Typography>
       </CardContent>
-      <CardActions sx={{ justifyContent: 'space-between', px: 2, py: 1 }}>
+      <CardActions sx={{ justifyContent: 'space-between' }}>
         <Button 
           size="small" 
           variant="contained" 
@@ -64,7 +66,7 @@ const Dashboard = () => {
     },
     {
       id: 2,
-      title: 'HTML ',
+      title: 'HTML',
       description: 'Learn how to structure and style websites using HTML and CSS.',
       image: htm,
       price: 299,
@@ -120,41 +122,28 @@ const Dashboard = () => {
     },
   ]);
 
-  const userId = 'user-id'; // Replace this with the actual user ID from authentication context or similar
+  const navigate = useNavigate(); // for navigation
 
-  const handleBuy = async (course) => {
-    try {
-      const response = await axios.post('http://localhost:8000/api/purchase', {
-        userId: userId,
-        courseId: course.id,
-      });
-      console.log('Purchase Response:', response.data);
-      // Handle successful purchase (e.g., redirect to payment page, show confirmation)
-    } catch (error) {
-      console.error('Error purchasing course:', error);
-      // Handle error (e.g., show error message to the user)
-    }
+  const handleBuy = (course) => {
+    navigate(`/student/payment/${course.id}`);
   };
 
   return (
-    <Box className="container" sx={{ textAlign: 'center', p: 4 }}>
-      <Typography variant="h4" gutterBottom>
-        Available Courses
-      </Typography>
-      <Box 
-        sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-        }}
-      >
-        {courses.map((course) => (
-          <Box key={course.id} sx={{ flexBasis: '30%', marginBottom: '2%' }}>
-            <Course course={course} handleBuy={handleBuy} />
-          </Box>
-        ))}
+    <>
+      <Box className="container" sx={{ textAlign: 'center', p: 4 }}>
+        <Typography variant="h4" gutterBottom>
+          Available Courses
+        </Typography>
+        <Grid container spacing={2} justifyContent="center">
+          {courses.map((course) => (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={course.id}>
+              <Course course={course} handleBuy={handleBuy} />
+            </Grid>
+          ))}
+        </Grid>
       </Box>
-    </Box>
+      
+    </>
   );
 };
 

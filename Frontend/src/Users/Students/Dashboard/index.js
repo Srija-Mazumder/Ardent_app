@@ -11,12 +11,12 @@ const Dashboard = () =>{
         <div className='p-5'>
         <h2 className='fw-bold mb-4'>Dashboard</h2>
         <div className='row row-cols-1 row-cols-lg-3 g-4 mb-5 g-3'>
-          <Cards icon={<BsFolderPlus />} title="Total Orders" value="140"/>  
-          <Cards icon={<FaShoppingCart/>} title="Cart" value="140"/>
-          <Cards icon={<SiTicktick />} title="Completed" value="140"/>
-          <Cards icon={<FaClock/>} title="Hours Spend" value="140"/>
-          <Cards icon={<FaClipboard/>} title="Tests Completed" value="140"/>
-          <Cards icon={<FaMedal/>} title="Score Board" value="140"/>  
+          <Cards icon={<BsFolderPlus />} title="Total Orders" value="10"/>  
+          <Cards icon={<FaShoppingCart/>} title="Cart" value="4"/>
+          <Cards icon={<SiTicktick />} title="Completed" value="5"/>
+          <Cards icon={<FaClock/>} title="Hours Spend" value="7"/>
+          <Cards icon={<FaClipboard/>} title="Tests Completed" value="3"/>
+          <Cards icon={<FaMedal/>} title="Score Board" value="2"/>  
         </div>
 
         <div className="container-fluid bg-light p-4">
